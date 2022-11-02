@@ -73,7 +73,6 @@ public:
 				startUp.fadeOut();
 				system("cls");
 				aboutThis.playSound();
-				Sleep(1000);
 				
 				std::cout <<
 						"********************************************************************************" << std::endl <<
@@ -97,7 +96,7 @@ public:
 						std::endl <<
 						" This project was created within 12 hours (steep learning curve included! ;D) " << std::endl <<
 						std::endl <<
-						" Speaking of sound: Have you noticed the 8-bit soundtrack of Farcry 3? (<3)  " << std::endl << std::endl;
+						" Speaking of sound: Is that the 8-bit Version of the FarCry 3 Soundtrack??    " << std::endl << std::endl;
 				system("pause");
 
 				aboutThis.fadeOut();

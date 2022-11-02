@@ -38,6 +38,7 @@ public:
 			inGameMusic.fadeOut();
 			player1->onWin();
 			player2->onLose();
+			std::cout << std::endl;
 			system("pause");
 
 		}
@@ -46,6 +47,7 @@ public:
 			field->printCurrentField();
 			inGameMusic.fadeOut();
 			gameOverSound.playSound();
+			std::cout << std::endl;
 			system("pause");
 		}
 		else
@@ -53,6 +55,7 @@ public:
 			field->printCurrentField();
 			inGameMusic.fadeOut();
 			gameOverSound.playSound();
+			std::cout << std::endl;
 			system("pause");
 		}
 

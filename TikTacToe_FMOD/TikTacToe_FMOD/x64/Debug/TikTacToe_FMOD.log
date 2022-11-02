@@ -1,2 +1,7 @@
-﻿  Main.cpp
+﻿  AudioCoreEngine.cpp
+  Audiosource.cpp
+D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\TikTacToe_FMOD\Audiosource.cpp(80,8): warning C4552: "&": Ergebnis des Ausdrucks nicht verwendet.
+  Main.cpp
+  Code wird generiert...
+  LINK : D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\x64\Debug\TikTacToe_FMOD.exe wurde nicht gefunden oder beim letzten inkrementellen Linkvorgang nicht erstellt; vollständiger Link wird durchgeführt.
   TikTacToe_FMOD.vcxproj -> D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\x64\Debug\TikTacToe_FMOD.exe
