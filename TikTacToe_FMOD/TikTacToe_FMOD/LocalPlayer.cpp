@@ -27,6 +27,8 @@ void LocalPlayer::doTurn(Field* field)
 			else
 			{
 				std::cout << "Invalid Input. Must be Number between 1-9." << std::endl;
+				Sleep(2000);
+				std::cout << std::endl;
 
 			}
 		}
@@ -45,12 +47,16 @@ void LocalPlayer::doTurn(Field* field)
 			else
 			{
 				std::cout << "Field at Position " << pos << " is not empty! Try again.\n";
+				Sleep(2000);
+				std::cout << std::endl;
 			}
 			
 		}
 		else
 		{
 			std::cout << "Input invalid. Out of Range. Try again." << std::endl;
+			Sleep(2000);
+			std::cout << std::endl;
 		}
 	}
 }
@@ -58,14 +64,23 @@ void LocalPlayer::doTurn(Field* field)
 void LocalPlayer::onWin()
 {
 	std::cout << "\n You win! \n";
+	Sleep(2000);
+	std::cout << std::endl;
+
 }
 
 void LocalPlayer::onLose()
 {
 	std::cout << "\n You lost! \n";
+	Sleep(2000);
+	std::cout << std::endl;
+
 }
 
 void LocalPlayer::onTie()
 {
 	std::cout << "\n It is a Tie! \n";
+	Sleep(2000);
+	std::cout << std::endl;
+
 }

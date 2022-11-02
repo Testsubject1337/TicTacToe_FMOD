@@ -1,2 +1,6 @@
-﻿  Main.cpp
+﻿  AIPlayer.cpp
+  Field.cpp
+  LocalPlayer.cpp
+  Main.cpp
+  Code wird generiert...
   TikTacToe_FMOD.vcxproj -> D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\x64\Debug\TikTacToe_FMOD.exe
