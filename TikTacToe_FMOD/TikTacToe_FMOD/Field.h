@@ -12,7 +12,9 @@ public:
 	//Fieldinfo
 	int getNumFreePositions();
 	int* getFreePositions(int* positions);
-	
+	void printCurrentField();
+
+
 	//Marksetter
 	bool putOwnMarkAt(int pos);
 	bool putEnemyMarkAt(int pos);
@@ -33,10 +35,6 @@ public:
 private:
 
 	bool hasPlayerWithCharWon(char character);
-	
-	void printCurrentField();
-	
-
 
 	bool isPlayer1Perspective = true;
 	char player1Char = ' ';
