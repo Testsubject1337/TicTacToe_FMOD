@@ -7,7 +7,7 @@ AudioCoreEngine::AudioCoreEngine()
 
 #ifdef _DEBUG
 		std::cout << "initializing FMod System..." << std::endl;
-		Sleep(2000);
+		Sleep(500);
 		std::cout << std::endl;
 #endif // _DEBUG
 
@@ -15,7 +15,7 @@ AudioCoreEngine::AudioCoreEngine()
 		if (result == FMOD_OK) {
 #ifdef _DEBUG
 			std::cout << "...System Creation is ok." << std::endl;
-			Sleep(2000);
+			Sleep(500);
 			std::cout << std::endl;
 #endif
 		};
@@ -25,13 +25,13 @@ AudioCoreEngine::AudioCoreEngine()
 		if (result == FMOD_OK)
 		{
 			std::cout << "...FMOD Instance Init went ok." << std::endl;
-			Sleep(2000);
+			Sleep(500);
 			std::cout << std::endl;
 		}
 		else if (result != FMOD_OK)
 		{
 			std::cout << "FMOD Instance Init went wrong. " << result << std::endl;
-			Sleep(2000);
+			Sleep(4000);
 			std::cout << std::endl;
 		}
 
