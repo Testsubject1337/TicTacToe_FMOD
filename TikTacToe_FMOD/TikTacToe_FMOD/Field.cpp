@@ -4,7 +4,7 @@
 Field::Field(char player1Char, char player2Char) 
 {
 	this->player1Char = player1Char;
-	this->player1Char = player1Char;
+	this->player2Char = player2Char;
 
 
 	//validating Input
@@ -14,7 +14,12 @@ Field::Field(char player1Char, char player2Char)
 		this->player2Char = '0';
 	}
 
-	//Safties first, set it again
+	resetField();
+
+}
+
+void Field::resetField() {
+
 	this->numFreePositions = 9;
 
 	for (int i = 0; i < 9; i++)
@@ -25,9 +30,13 @@ Field::Field(char player1Char, char player2Char)
 }
 
 
-
-
 //Fieldinfo
+
+int Field::getNumFreePositions()
+{
+	return numFreePositions;
+}
+
 int* Field::getFreePositions(int* positions) //Get free Positions
 {
 	int arrayPos = 0;
@@ -36,9 +45,10 @@ int* Field::getFreePositions(int* positions) //Get free Positions
 		if (field[i] == ' ')
 		{
 		positions[arrayPos] = i;
-		arrayPos;
-}
+		arrayPos++;
+		}
 	}
+	return positions;
 }
 
 void Field::switchPerspective() { //Switching Player
@@ -99,7 +109,7 @@ bool Field::isOwnMarkAt(int pos)
 {
 	if (isPlayer1Perspective)
 		return field[pos] == player1Char;
-	else if (!isPlayer1Perspective)
+	else
 		return field[pos] == player2Char;
 }
 
@@ -147,7 +157,7 @@ bool Field::isFull() {
 
 //FieldManger
 bool Field::hasPlayerWithCharWon(char character)
-{
+{		//Check for all possible Wins
 	if (field[0] == character && field[1] == character && field[2] == character
 		|| field[0] == character && field[3] == character && field[6] == character
 		|| field[0] == character && field[4] == character && field[8] == character
@@ -172,3 +182,5 @@ void Field::printCurrentField()
 		<< "    ---|---|---" << "\t\t---|---|---" << std::endl
 		<< "     " << field[6] << " | " << field[7] << " | " << field[8] << "\t\t" << " 7" << " | " << "8" << " | " << "9" << std::endl;
 }
+
+

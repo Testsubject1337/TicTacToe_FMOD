@@ -1,5 +1,5 @@
 #include "LocalPlayer.h"
-#include <string>
+
 
 void LocalPlayer::doTurn(Field* field)
 {
@@ -18,21 +18,22 @@ void LocalPlayer::doTurn(Field* field)
 			std::cin >> userinput;
 			std::cout << std::endl;
 
-			if (userinput.length() == 1)
+			//Validate Input...  yes, i hate myself for this cucubercode but this was way too timeconsuming and in this case it justs works :D
+			if (userinput.length() == 1 && (userinput == "1" || userinput == "2" || userinput == "3" || userinput == "4" || userinput == "5" || userinput == "6" || userinput == "7" || userinput == "8" || userinput == "9")) 
 			{
-				input = stoi(userinput);
-				return;
+				input = stoi(userinput);  //Converting to Integer
+				break;
 			}
 			else
 			{
-				std::cout << "Invalid Input. Number can not be higher than 9." << std::endl;
+				std::cout << "Invalid Input. Must be Number between 1-9." << std::endl;
 
 			}
 		}
 
-
-			pos = input; //Converting Ascii-Char to Integer (Ascii-Table)
-			pos--; //Player can intuitively set a Number between 1-9 and still stays in array-range
+			input--; //Player can intuitively set a Number between 1-9 and still stays in array-range of field
+			pos = input;
+			
 
 		if (pos <= 8 && pos >= 0) //checking array-range
 		{

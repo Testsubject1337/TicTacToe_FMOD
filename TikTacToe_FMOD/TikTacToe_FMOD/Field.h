@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <string>
+#include <algorithm>
+#include <cctype>
 
 class Field
 {
@@ -30,6 +33,8 @@ public:
 	bool hasWon();
 	bool hasLost();
 	bool isFull();
+
+	void resetField();
 
 
 private:

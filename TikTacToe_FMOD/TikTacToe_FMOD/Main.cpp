@@ -2,11 +2,15 @@
 //
 
 #include <iostream>
-#include <fmod_studio.hpp>
-#include <fmod_studio.h>
-#include <fmod_studio_common.h>
+#include <string>
+#include "TicTacToeFMOD.h"
+
+int testint = 99;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    TicTacToeFMOD t = TicTacToeFMOD();
+    t.run();
+
+    return 0;
 }
