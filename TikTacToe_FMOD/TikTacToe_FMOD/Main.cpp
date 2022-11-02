@@ -4,11 +4,12 @@
 #include <iostream>
 #include <string>
 #include "TicTacToeFMOD.h"
-
-int testint = 99;
+#include "AudioCoreEngine.h"
+#include <fmod.h>
 
 int main()
 {
+
     TicTacToeFMOD t = TicTacToeFMOD();
     t.run();
 

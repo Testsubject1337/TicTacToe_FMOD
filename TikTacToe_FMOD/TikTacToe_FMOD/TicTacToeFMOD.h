@@ -4,6 +4,8 @@
 #include "LocalPlayer.h"
 #include "AIPlayer.h"
 #include "Game.h"
+#include "AudioSource.h"
+
 
 class TicTacToeFMOD 
 {
@@ -12,11 +14,14 @@ public:
 
 	void run()
 	{
-		
 
+		
 		char input;
 		while (true)
 		{
+			AudioCoreEngine FMODINSTANCE = AudioCoreEngine();
+			AudioSource startUp = AudioSource("startup.wav", FMOD_LOOP_NORMAL, FMODINSTANCE.getFMODSystem());
+			startUp.playSound();
 			system("cls");
 			std::cout <<
 				"*******************************************************************************" << std::endl <<
@@ -32,7 +37,8 @@ public:
 				"-----------------------------------Main Menu-----------------------------------  " << std::endl <<
 				"		1) Singleplayer (AI-Mode) \n" <<
 				"		2) Multiplayer \n" <<
-				"		3) Quit \n		";
+				"		3) About this Project \n" <<
+				"		4) Quit \n		";
 			std::cin >> input;
 			int numberEntered = input - '0'; //Converting Char to Int with Asciitable
 
@@ -50,6 +56,13 @@ public:
 
 			}
 			else if (numberEntered == 3)
+			{
+				startUp.stopSound();
+
+
+			}
+
+			else if (numberEntered == 4)
 			{
 				break;
 			}
