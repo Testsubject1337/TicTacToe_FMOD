@@ -139,7 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="TikTacToe_FMOD.cpp" />
+    <ClCompile Include="AIPlayer.cpp" />
+    <ClCompile Include="Field.cpp" />
+    <ClCompile Include="LocalPlayer.cpp" />
+    <ClCompile Include="Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AIPlayer.h" />
+    <ClInclude Include="Field.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="LocalPlayer.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="TicTacToeFMOD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
