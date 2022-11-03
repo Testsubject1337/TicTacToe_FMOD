@@ -87,16 +87,16 @@ public:
 						" " << std::endl <<
 						"--------------------------------Dear Crytek-Team,-------------------------------" << std::endl <<
 						" " << std::endl <<
-						" It looks like you found the less obvious part of my application! ;) " << std::endl <<
+						"It looks like you found the less obvious part of my application! ;) " << std::endl <<
 						std::endl <<
-						" This project was created purely for this purpose. " << std::endl <<
-						" The basic idea for the TikTacToe comes from @Pilzschaf on YouTube, I created the" << std::endl <<
-						" projectbase using his videos and adapted it for my purposes, like adding sound  " << std::endl <<
-						" using the **FMOD Core API** and a few sound effects. " << std::endl <<
+						"This project was created purely for this purpose. " << std::endl <<
+						"The basic idea for the TikTacToe comes from @Pilzschaf on YouTube, I created the" << std::endl <<
+						"project´s fundamentals based on his videos and adapted it for my purposes - like " << std::endl <<
+						"adding sound using the **FMOD Core API** and a few sound effects. " << std::endl <<
 						std::endl <<
-						" This project was created within 12 hours (steep learning curve included! ;D) " << std::endl <<
+						"This project was created within 9 hours (steep learning curve included! ;D) " << std::endl <<
 						std::endl <<
-						" Speaking of sound: Is that the 8-bit Version of the FarCry 3 Soundtrack??    " << std::endl << std::endl;
+						"Speaking of sound: Is that the 8-bit Version of the FarCry 3 Theme??    " << std::endl << std::endl;
 				system("pause");
 
 				aboutThis.fadeOut();
