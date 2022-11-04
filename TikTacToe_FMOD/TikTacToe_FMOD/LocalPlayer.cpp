@@ -63,7 +63,9 @@ void LocalPlayer::doTurn(Field* field)
 
 void LocalPlayer::onWin()
 {
-	std::cout << "\n You win! \n";
+	std::cout << std::endl;
+	if (!isSingleplayer);
+	else std::cout << "You win!";
 	Sleep(2000);
 	std::cout << std::endl;
 
@@ -71,7 +73,9 @@ void LocalPlayer::onWin()
 
 void LocalPlayer::onLose()
 {
-	std::cout << "\n You lost! \n";
+	std::cout << std::endl;
+	if (!isSingleplayer);
+	else std::cout << "You lost!";
 	Sleep(2000);
 	std::cout << std::endl;
 
@@ -79,7 +83,9 @@ void LocalPlayer::onLose()
 
 void LocalPlayer::onTie()
 {
-	std::cout << "\n It is a Tie! \n";
+	std::cout << std::endl;
+
+	std::cout << "It is a Tie!";
 	Sleep(2000);
 	std::cout << std::endl;
 

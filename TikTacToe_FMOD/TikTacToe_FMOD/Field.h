@@ -9,7 +9,12 @@ class Field
 {
 public:
 	Field(char player1Char = 'X', char player2Char = 'O');
-
+	~Field() {
+#ifdef _DEBUG
+		std::cout << "\nFieldDestructor called.";
+		Sleep(2000);
+#endif
+	};
 
 	void switchPerspective();
 

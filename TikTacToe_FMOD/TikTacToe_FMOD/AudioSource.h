@@ -17,6 +17,9 @@ public:
 
 	AudioSource(std::string sourceFile, FMOD_MODE MODE, FMOD::System* FMODSYSTEM);
 	AudioSource(std::string sourceFile, FMOD::System* FMODSYSTEM);
+	~AudioSource() {
+		soundhandle->release();
+	}
 
 	void playSound();
 	void stopSound();

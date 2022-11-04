@@ -3,6 +3,12 @@
 //Constuctor
 Field::Field(char player1Char, char player2Char) 
 {
+
+#ifdef _DEBUG
+	std::cout << "Field Instantiation..." << std::endl;
+	Sleep(2000)
+#endif
+
 	this->player1Char = player1Char;
 	this->player2Char = player2Char;
 
@@ -20,12 +26,16 @@ Field::Field(char player1Char, char player2Char)
 
 void Field::resetField() {
 
+	//reset Free-Positions-Counter
 	this->numFreePositions = 9;
 
+	//clear Fields
 	for (int i = 0; i < 9; i++)
 	{
 		field[i] = ' ';
 	}
+	//reset Player1Perspective for avoiding user-unexpected Character-Switch
+	isPlayer1Perspective = true;
 
 }
 
