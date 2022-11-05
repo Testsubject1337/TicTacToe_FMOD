@@ -15,12 +15,12 @@ private:
 	FMOD::System* fmodsysptr;
 	const int maxChannels = 32;
 	FMOD_RESULT result;
+	FMOD::ChannelGroup* mainMixptr;
 
 public:
-
 	AudioCoreEngine();
 	FMOD::System* getFMODSystem();
-
+	FMOD::ChannelGroup* getMainMixChannelGroup();
 
 };
 

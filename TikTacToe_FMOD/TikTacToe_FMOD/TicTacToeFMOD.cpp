@@ -23,7 +23,8 @@ void TicTacToeFMOD::run()
 			"		1) Singleplayer (AI-Mode) \n" <<
 			"		2) Local Multiplayer \n" <<
 			"		3) About this Project \n" <<
-			"		4) Quit \n		";
+			"		4) Settings \n" <<
+			"		5) Quit \n		";
 		std::cin >> input;
 		int numberEntered = input - '0'; //Converting Char to Int with Asciitable
 
@@ -82,7 +83,7 @@ void TicTacToeFMOD::run()
 				std::endl <<
 				"This project was created purely for this purpose. " << std::endl <<
 				"The basic idea for the TikTacToe comes from @Pilzschaf on YouTube, I created the" << std::endl <<
-				"project´s fundamentals based on his videos and adapted it for my purposes - like " << std::endl <<
+				"projects fundamentals based on his videos and adapted it for my purposes - like " << std::endl <<
 				"adding sound using the **FMOD Core API** and a few sound effects. " << std::endl <<
 				std::endl <<
 				"This project was created within 9 hours (steep learning curve included! ;D) " << std::endl <<
@@ -97,7 +98,7 @@ void TicTacToeFMOD::run()
 		}
 
 		//Quit
-		else if (numberEntered == 4)
+		else if (numberEntered == 5)
 		{
 			selectSound.playSound();
 			system("cls");

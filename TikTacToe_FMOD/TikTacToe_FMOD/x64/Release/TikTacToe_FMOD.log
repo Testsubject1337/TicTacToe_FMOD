@@ -1,12 +1,12 @@
-﻿  AIPlayer.cpp
-  Field.cpp
+﻿  Audiosource.cpp
+C:\Users\phili\Documents\GitHub\TicTacToe_FMOD\TikTacToe_FMOD\TikTacToe_FMOD\Audiosource.cpp(80,8): warning C4552: "&": Ergebnis des Ausdrucks nicht verwendet.
+  AudioCoreEngine.cpp
   Game.cpp
-  LocalPlayer.cpp
   Main.cpp
   TicTacToeFMOD.cpp
   Code wird generiert.
-  13 of 174 functions ( 7.5%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    16 functions had inline decision re-evaluated but remain unchanged
+  15 of 174 functions ( 8.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.
-  TikTacToe_FMOD.vcxproj -> D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\x64\Release\TikTacToe_FMOD.exe
+  TikTacToe_FMOD.vcxproj -> C:\Users\phili\Documents\GitHub\TicTacToe_FMOD\TikTacToe_FMOD\x64\Release\TikTacToe_FMOD.exe

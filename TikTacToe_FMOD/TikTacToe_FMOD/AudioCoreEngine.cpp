@@ -43,3 +43,7 @@ AudioCoreEngine::AudioCoreEngine()
 FMOD::System* AudioCoreEngine::getFMODSystem() {
 	return fmodsysptr;
 }
+
+FMOD::ChannelGroup* AudioCoreEngine::getMainMixChannelGroup() {
+	return mainMixptr;
+}

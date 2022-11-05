@@ -1,5 +1,34 @@
 #include "AudioSource.h"
 
+//Costructor 0
+AudioSource::AudioSource(std::string sourceFile, FMOD_MODE MODE, FMOD::System* FMODSYSTEM, FMOD::ChannelGroup* TARGET_CHANNELGROUP)
+{
+	this->sourceFile = sourceFile;
+	this->FMODSYSTEMPTR = FMODSYSTEM;
+	this->MODE = MODE;
+	this->channelgroup = TARGET_CHANNELGROUP;
+
+
+
+#ifdef _DEBUG
+
+	std::cout << "Trying to Create Soundhandle with **" << this->sourceFileptr->c_str() << "** with Standard Memory Configuration" << std::endl;
+#endif
+	result = FMODSYSTEMPTR->createSound(this->sourceFileptr->c_str(), MODE, NULL, &soundhandle);
+
+#ifdef _DEBUG
+	if (result != FMOD_OK)
+	{
+		std::cout << "...Failed. " << FMOD_ErrorString(result);
+		Sleep(1000);
+		std::cout << std::endl;
+
+	}
+	else std::cout << "...successully created Soundhandle. " << FMOD_ErrorString(result) << soundhandle << std::endl;
+#endif
+	channel->setVolume(defaultVolume);
+	channel->setChannelGroup(this->channelgroup);
+}
 
 //Constructor 1
 AudioSource::AudioSource(std::string sourceFile, FMOD_MODE MODE, FMOD::System* FMODSYSTEM)
