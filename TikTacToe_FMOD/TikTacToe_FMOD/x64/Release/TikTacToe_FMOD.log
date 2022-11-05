@@ -1,12 +1,13 @@
-﻿  Audiosource.cpp
-C:\Users\phili\Documents\GitHub\TicTacToe_FMOD\TikTacToe_FMOD\TikTacToe_FMOD\Audiosource.cpp(80,8): warning C4552: "&": Ergebnis des Ausdrucks nicht verwendet.
-  AudioCoreEngine.cpp
+﻿  AudioCoreEngine.cpp
+D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\TikTacToe_FMOD\AudioCoreEngine.cpp(98,21): warning C4244: "=": Konvertierung von "double" in "float", möglicher Datenverlust
+  Audiosource.cpp
+D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\TikTacToe_FMOD\Audiosource.cpp(114,8): warning C4552: "&": Ergebnis des Ausdrucks nicht verwendet.
   Game.cpp
   Main.cpp
   TicTacToeFMOD.cpp
   Code wird generiert.
-  15 of 174 functions ( 8.6%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  2 of 185 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.
-  TikTacToe_FMOD.vcxproj -> C:\Users\phili\Documents\GitHub\TicTacToe_FMOD\TikTacToe_FMOD\x64\Release\TikTacToe_FMOD.exe
+  TikTacToe_FMOD.vcxproj -> D:\Projekte\GITHUB\TicTacToe_FMOD\TikTacToe_FMOD\x64\Release\TikTacToe_FMOD.exe

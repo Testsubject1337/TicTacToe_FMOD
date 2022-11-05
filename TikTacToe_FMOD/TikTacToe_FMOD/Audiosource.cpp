@@ -15,6 +15,8 @@ AudioSource::AudioSource(std::string sourceFile, FMOD_MODE MODE, FMOD::System* F
 	std::cout << "Trying to Create Soundhandle with **" << this->sourceFileptr->c_str() << "** with Standard Memory Configuration" << std::endl;
 #endif
 	result = FMODSYSTEMPTR->createSound(this->sourceFileptr->c_str(), MODE, NULL, &soundhandle);
+	channel->setVolume(defaultVolume);
+	channel->setChannelGroup(this->channelgroup);
 
 #ifdef _DEBUG
 	if (result != FMOD_OK)
@@ -24,10 +26,13 @@ AudioSource::AudioSource(std::string sourceFile, FMOD_MODE MODE, FMOD::System* F
 		std::cout << std::endl;
 
 	}
-	else std::cout << "...successully created Soundhandle. " << FMOD_ErrorString(result) << soundhandle << std::endl;
+	else
+	{
+		std::cout << "...successully created Soundhandle within Channelgroup " << this->channelgroup << " ...." << FMOD_ErrorString(result) << "\n Soundhandle: " << soundhandle << std::endl;
+		Sleep(1000);
+	}
 #endif
-	channel->setVolume(defaultVolume);
-	channel->setChannelGroup(this->channelgroup);
+
 }
 
 //Constructor 1

@@ -11,16 +11,22 @@
 #include <Windows.h>
 
 class AudioCoreEngine {
+
 private:
 	FMOD::System* fmodsysptr;
 	const int maxChannels = 32;
 	FMOD_RESULT result;
-	FMOD::ChannelGroup* mainMixptr;
-
+	std::string mainChannelGroup = "mainMix";
+	FMOD::ChannelGroup* mainChannelGroupPTR;
+	FMOD::SoundGroup* mainSoundGroup;
+	float setVolume = 0;
+	
+	
 public:
 	AudioCoreEngine();
 	FMOD::System* getFMODSystem();
-	FMOD::ChannelGroup* getMainMixChannelGroup();
+	FMOD::ChannelGroup* getMainChannelGroup();
+	void setMasterVolume(float volume); //Set Volume between 0-10
 
 };
 

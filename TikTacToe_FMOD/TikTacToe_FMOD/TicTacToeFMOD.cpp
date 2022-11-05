@@ -7,24 +7,14 @@ void TicTacToeFMOD::run()
 	{
 		if (!isThemePlaying) startUp.playSound();
 		isThemePlaying = true;
-		system("cls");
-		std::cout <<
-			"*******************************************************************************" << std::endl <<
-			"* _______  ___  _______  _______  _______  _______  _______  _______  _______ *" << std::endl <<
-			"*|       ||   ||       ||       ||   _   ||       ||       ||       ||       |*" << std::endl <<
-			"*|_     _||   ||       ||_     _||  |_|  ||       ||_     _||   _   ||    ___|*" << std::endl <<
-			"*  |   |  |   ||       |  |   |  |       ||       |  |   |  |  | |  ||   |___ *" << std::endl <<
-			"*  |   |  |   ||      _|  |   |  |       ||      _|  |   |  |  |_|  ||    ___|*" << std::endl <<
-			"*  |   |  |   ||     |_   |   |  |   _   ||     |_   |   |  |       ||   |___ *" << std::endl <<
-			"*  |___|  |___||_______|  |___|  |__| |__||_______|  |___|  |_______||_______|*" << std::endl <<
-			"*********************************FMOD-EDITION**********************************" << std::endl;
-		std::cout << std::endl <<
+		drawAsciiArt(1);
+		std::cout << 
 			"-----------------------------------Main Menu-----------------------------------  " << std::endl <<
 			"		1) Singleplayer (AI-Mode) \n" <<
 			"		2) Local Multiplayer \n" <<
 			"		3) About this Project \n" <<
 			"		4) Settings \n" <<
-			"		5) Quit \n		";
+			"		5) Quit \n		Input: ";
 		std::cin >> input;
 		int numberEntered = input - '0'; //Converting Char to Int with Asciitable
 
@@ -63,20 +53,10 @@ void TicTacToeFMOD::run()
 			selectSound.playSound();
 			startUp.fadeOut();
 			isThemePlaying = false;
-			system("cls");
 			aboutThis.playSound();
-
+			drawAsciiArt(2);
 			std::cout <<
-				"********************************************************************************" << std::endl <<
-				"* _______  _______  _______  __   __  _______   _______  __   __  ___  _______ *" << std::endl <<
-				"*|   _   ||  _    ||       ||  | |  ||       | |       ||  | |  ||   ||       |*" << std::endl <<
-				"*|  |_|  || |_|   ||   _   ||  | |  ||_     _| |_     _||  |_|  ||   ||  _____|*" << std::endl <<
-				"*|       ||       ||  | |  ||  |_|  |  |   |     |   |  |       ||   || |_____ *" << std::endl <<
-				"*|       ||  _   | |  |_|  ||       |  |   |     |   |  |       ||   ||_____  |*" << std::endl <<
-				"*|   _   || |_|   ||       ||       |  |   |     |   |  |   _   ||   | _____| |*" << std::endl <<
-				"*|__| |__||_______||_______||_______|  |___|     |___|  |__| |__||___||_______|*" << std::endl <<
-				"***********************The Secret Part of my application************************" << std::endl <<
-				" " << std::endl <<
+
 				"--------------------------------Dear Crytek-Team,-------------------------------" << std::endl <<
 				" " << std::endl <<
 				"It looks like you found the less obvious part of my application! ;) " << std::endl <<
@@ -93,8 +73,64 @@ void TicTacToeFMOD::run()
 
 			aboutThis.fadeOut();
 
+		}
+
+		//Settings
+		else if (numberEntered == 4)
+		{
+			while (true)
+			{
+				system("cls");
+				drawAsciiArt(1);
+				std::cout <<
+					"-----------------------------------Settings------------------------------------" << std::endl <<
+					"		1) Adjust Volume \n" <<
+					"		2) back \n" <<
+					"		Input: ";
+				input = '0';
+				numberEntered = '0';
+				std::cin >> input;
+				numberEntered = input - '0'; // Converting Char to Int with Asciitable
 
 
+
+				if (numberEntered == 1) // Volume Setting
+				{
+					while (true)
+					{
+						drawAsciiArt(1);
+						std::cout <<
+						"---------------------------------Adjust Volume---------------------------------" << std::endl <<
+						"		You can Adjust the Volume with a Number betweeen 0 & 10(max). \n" <<
+						"		42 for abort. \n		Input: ";
+
+						floatEntered = 0;
+						std::cin >> floatEntered; // !!! Comma as User Input still breaks the Code...
+						
+
+						if (floatEntered == 42)
+						{
+							break;
+						}
+						else if (floatEntered >=0 && floatEntered <= 10)
+						{;
+							FMODINSTANCEPTR->setMasterVolume(floatEntered);
+							break;
+						}
+						else { std::cout << "Invalid Input. Try again." << std::endl; }
+						floatEntered = 0;
+					}
+				}
+				else if (numberEntered == 2)
+				{
+					break;
+				}
+				else
+				{
+					std::cout << "Invalid input. Please try again.";
+					Sleep(300);
+				}
+			}
 		}
 
 		//Quit
@@ -117,4 +153,37 @@ void TicTacToeFMOD::run()
 		}
 
 	}
+}
+
+
+void TicTacToeFMOD::drawAsciiArt(int imgID = 1)  // 1=Default, 2=About This
+{
+	if (imgID == 1) // NORMAL TICTACTOE-HEADER
+	{
+		system("cls");
+		std::cout <<
+			"*******************************************************************************" << std::endl <<
+			"* _______  ___  _______  _______  _______  _______  _______  _______  _______ *" << std::endl <<
+			"*|       ||   ||       ||       ||   _   ||       ||       ||       ||       |*" << std::endl <<
+			"*|_     _||   ||       ||_     _||  |_|  ||       ||_     _||   _   ||    ___|*" << std::endl <<
+			"*  |   |  |   ||       |  |   |  |       ||       |  |   |  |  | |  ||   |___ *" << std::endl <<
+			"*  |   |  |   ||      _|  |   |  |       ||      _|  |   |  |  |_|  ||    ___|*" << std::endl <<
+			"*  |   |  |   ||     |_   |   |  |   _   ||     |_   |   |  |       ||   |___ *" << std::endl <<
+			"*  |___|  |___||_______|  |___|  |__| |__||_______|  |___|  |_______||_______|*" << std::endl <<
+			"*********************************FMOD-EDITION**********************************" << std::endl << std::endl;
+	}
+	else if (imgID == 2) // ABOUT THIS HEADER
+	{
+		system("cls");
+		std::cout <<
+			"********************************************************************************" << std::endl <<
+			"* _______  _______  _______  __   __  _______   _______  __   __  ___  _______ *" << std::endl <<
+			"*|   _   ||  _    ||       ||  | |  ||       | |       ||  | |  ||   ||       |*" << std::endl <<
+			"*|  |_|  || |_|   ||   _   ||  | |  ||_     _| |_     _||  |_|  ||   ||  _____|*" << std::endl <<
+			"*|       ||       ||  | |  ||  |_|  |  |   |     |   |  |       ||   || |_____ *" << std::endl <<
+			"*|       ||  _   | |  |_|  ||       |  |   |     |   |  |       ||   ||_____  |*" << std::endl <<
+			"*|   _   || |_|   ||       ||       |  |   |     |   |  |   _   ||   | _____| |*" << std::endl <<
+			"*|__| |__||_______||_______||_______|  |___|     |___|  |__| |__||___||_______|*" << std::endl <<
+			"***********************The Secret Part of my application************************" << std::endl << std::endl;
+	} 
 }
