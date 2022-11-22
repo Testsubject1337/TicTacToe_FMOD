@@ -116,6 +116,7 @@ void AudioSource::stopSound()
 
 //Fade Out
 void AudioSource::fadeOut() {
+	//This could be done in a much better way using the FMOD API itself, but i want to stop the code as long it is fading out anyway.
 	for (float i = 1; i > 0; i -= 0.025f) {
 		channel->setVolume(defaultVolume*i);
 		Sleep(10);
